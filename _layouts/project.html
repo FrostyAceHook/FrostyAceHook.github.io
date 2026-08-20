@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="wrap__projects">
+  <a class="backlink" href="{{ '/projects/' | relative_url }}">&larr; All projects</a>
+
+  {% if page.banner %}
+  <img class="project-banner" src="{{ page.banner | relative_url }}" alt="">
+  {% endif %}
+
+  <h1 class="project-title">{{ page.title }}</h1>
+
+  {% if page.hook %}
+  <p class="project-hook">{{ page.hook }}</p>
+  {% endif %}
+
+  {% if page.skills %}
+  <ul class="tags">
+    {% for skill in page.skills %}<li class="tags-big">{{ skill }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+
+  <div class="project-body">
+    <div class="prose">
+    {{ content }}
+    </div>
+    <nav class="toc" aria-label="On this page"></nav>
+  </div>
+</div>
+</div>

@@ -1,0 +1,31 @@
+<nav class="nav">
+<div class="wrap {% if page.url contains '/projects/' and page.url != '/projects/' %}wrap__projects{% endif %} nav__inner">
+
+    <a class="nav__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+
+    <a class="nav__link" href="{{ '/' | relative_url }}" data-nav="home"
+    {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
+
+    <a class="nav__link" href="{{ '/projects/' | relative_url }}"
+       {% if page.url contains "/projects" %}aria-current="page"{% endif %}>Projects</a>
+
+    <a class="nav__link" href="{{ '/' | relative_url }}#contact" data-nav="contact">Contact</a>
+
+    {% if site.resume %}
+    <a class="nav__resume" href="{{ site.resume | relative_url }}">Resume</a>
+    {% endif %}
+
+    <button class="theme-toggle" type="button" data-theme-toggle
+            aria-label="Switch to dark theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+      </svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.2"/>
+        <path d="M12 1.6v2.3M12 20.1v2.3M4.5 4.5l1.6 1.6M17.9 17.9l1.6 1.6M1.8 12h2.3M20.1 12h2.3M4.5 19.5l1.6-1.6M17.9 6.1l1.6-1.6"/>
+      </svg>
+    </button>
+  </div>
+</nav>

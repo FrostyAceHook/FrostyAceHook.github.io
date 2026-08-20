@@ -1,0 +1,31 @@
+---
+layout: default
+title: Projects
+---
+
+<div class="wrap">
+  <h1 class="page-title">Projects</h1>
+  <p class="page-intro">
+    Design, analysis, programming, manufacturing.
+  </p>
+
+  {% assign projects = site.projects | sort: "order" %}
+
+  <div class="projects">
+    {% for project in projects %}
+    <a class="card" href="{{ project.url | relative_url }}">
+      {% if project.banner %}
+      <img class="card__banner" src="{{ project.banner | relative_url }}" alt="{{ project.banner_alt }}" loading="lazy">
+      {% endif %}
+      <h3 class="card__title">{{ project.title }}</h3>
+      {% if project.skills %}
+      <ul class="tags">
+        {% for skill in project.skills %}<li>{{ skill }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+      <p class="card__hook">{{ project.hook }}</p>
+      <span class="card__more">Read more &rarr;</span>
+    </a>
+    {% endfor %}
+  </div>
+</div>

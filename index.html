@@ -1,0 +1,80 @@
+---
+layout: default
+title: Home
+---
+
+<div class="wrap">
+
+  <header class="hero">
+    <div>
+      <div class="hero__namerow">
+        <h1 class="hero__name">{{ site.title }}</h1>
+        {% include social-icons.html %}
+      </div>
+      <p class="hero__role">{{ site.role }}</p>
+      <p class="hero__bio">{{ site.bio }}</p>
+
+      <div class="jumps">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#skills">Skills</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <img class="hero__portrait" src="{{ site.portrait | relative_url }}"
+         alt="Portrait of {{ site.title }}" width="400" height="400">
+  </header>
+
+  {% assign projects = site.projects | sort: "order" %}
+
+  <section id="projects">
+    <h2 class="section-head">
+      Projects
+    </h2>
+
+    <div class="projects">
+      {% for project in projects %}
+      <a class="card" href="{{ project.url | relative_url }}">
+        {% if project.banner %}
+        <img class="card__banner" src="{{ project.banner | relative_url }}"
+             alt="" loading="lazy">
+        {% endif %}
+        <h3 class="card__title">{{ project.title }}</h3>
+        {% if project.skills %}
+        <ul class="tags">
+          {% for skill in project.skills %}<li>{{ skill }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        <p class="card__hook">{{ project.hook }}</p>
+        <span class="card__more">Read more &rarr;</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-head">Skills</h2>
+
+    <div class="skills">
+      {% for group in site.data.skills %}
+      <div class="skills__group">
+        <h3>{{ group.category }}</h3>
+        <ul>
+          {% for item in group.items %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-head">Contact</h2>
+    <p>
+      Open to graduate roles and internships in propulsion, computational
+      engineering, embedded programming, and mechanical design. The fastest way
+      to reach me is LinkedIn.
+    </p>
+    <a class="contact__mail" href="{{ site.social.linkedin }}">Message me on LinkedIn &rarr;</a>
+  </section>
+
+</div>

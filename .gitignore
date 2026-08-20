@@ -1,0 +1,7 @@
+.*
+!/.gitignore
+
+_site/
+.jekyll-cache/
+Gemfile
+Gemfile.lock

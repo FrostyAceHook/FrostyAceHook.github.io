@@ -1,0 +1,42 @@
+title: Stuart Davis
+role: Aerospace Engineering Graduate Student
+description: >-
+  Graduate mechanical engineering student with practical experience in
+  programming, computational engineering, and propulsion.
+
+bio: >-
+  Graduate mechanical engineering (aerospace specialisation) student with
+  practical experience in programming, computational engineering, propulsion,
+  fluid systems, and test engineering - working on projects from static thrust
+  structures to liquid rocket engines. Focused on developing and optimising
+  technologies that benefit from advanced analysis and custom simulation.
+
+portrait: /assets/portrait.jpg
+
+resume: /assets/Stuart_Davis_Resume.pdf
+
+social:
+  linkedin: https://www.linkedin.com/in/stuart-davis-503b60318/
+  github: https://github.com/FrostyAceHook
+
+url: "https://FrostyAceHook.github.io"
+baseurl: ""
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache
+  - .git

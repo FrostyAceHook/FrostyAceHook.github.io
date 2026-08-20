@@ -1,0 +1,44 @@
+- category: Programming
+  items:
+    - C / C++ (embedded, custom simulation)
+    - Python (numpy, scipy, sympy, pandas, matplotlib)
+    - C# / Java (PicoGK)
+    - MATLAB
+    - Git / Linux
+
+- category: CAD
+  items:
+    - Solidworks (modeling, drawings, FEA)
+    - Onshape (modeling, drawings)
+    - Technical drawing / detailing
+    - Design for manufacture
+
+- category: Analysis & Simulation
+  items:
+    - Custom solvers (C/C++, Python)
+    - Thermodynamics / fluid mechanics
+    - Ansys (structural, thermal, CFD)
+
+- category: Manufacturing
+  items:
+    - Additive (FDM, SLA, DMLM)
+    - CNC machining
+    - Laser / waterjet cutting
+    - Welding
+    - Assembly / fitting
+
+- category: Test Engineering
+  items:
+    - Custom DAQ & control
+    - STM32
+    - LabJack / Synnax
+    - Data analysis
+    - Thermocouples / pressure transducers / load cells
+
+- category: Standards & Practice
+  items:
+    - AS 1100 (technical drawing)
+    - ISO 1101 (GD&T)
+    - ISO 286 (limits and fits)
+    - ISO 2768 (general tolerances)
+    - Design reviews

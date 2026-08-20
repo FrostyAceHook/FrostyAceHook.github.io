@@ -1,0 +1,22 @@
+<footer class="wrap">
+  <div class="titleblock">
+
+    <div class="titleblock__cell">
+      <span class="titleblock__label">Author</span>
+      <span class="titleblock__value">{{ site.title }}</span>
+    </div>
+
+    <div class="titleblock__cell">
+      <span class="titleblock__label">Contact</span>
+      <a class="titleblock__value" href="{{ site.social.linkedin }}">LinkedIn</a>
+      /
+      <a class="titleblock__value" href="{{ site.social.github }}">GitHub</a><br>
+    </div>
+
+    <div class="titleblock__cell">
+      <span class="titleblock__label">Revised</span>
+      <span class="titleblock__value">{{ site.time | date: "%Y-%m-%d" }}</span>
+    </div>
+
+  </div>
+</footer>
