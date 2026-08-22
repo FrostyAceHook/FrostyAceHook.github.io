@@ -15,3 +15,5 @@ skills:
 Hybrid rocket engine simulator and optimiser. Backend written in C to allow gradient descent executed on a cost function to optimise rocket parameters in seconds.
 
 This page is a work in progress. Check back later.
+
+You can check out bro [here](https://github.com/FrostyAceHook/bro).
